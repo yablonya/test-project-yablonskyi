@@ -1,0 +1,17 @@
+@import "src/styles/theme";
+
+.container {
+  background-color: $beige;
+  position: relative;
+  height: 300px;
+
+  &:after {
+    content: "";
+    position: absolute;
+
+    right: 0;
+    background-color: $milk;
+    height: 100%;
+    width: 33%;
+  }
+}
