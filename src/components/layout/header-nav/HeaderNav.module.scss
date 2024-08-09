@@ -19,6 +19,7 @@
 .dropdowns {
   display: flex;
   gap: 40px;
+  color: $gray-1;
 
   & > a {
     align-content: center;
@@ -36,14 +37,6 @@
     height: 100%;
     width: 100%;
     padding-left: 40px;
-    border: none;
-    outline: none;
-    text-overflow: ellipsis;
-
-    &::placeholder {
-      font-weight: 300;
-      color: $gray-2;
-    }
 
     &::-webkit-search-cancel-button {
       -webkit-appearance: none;
@@ -54,6 +47,7 @@
 
 .searchIcon {
   position: absolute;
+  color: $gray-1;
 }
 
 .account {

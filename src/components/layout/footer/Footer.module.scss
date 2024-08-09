@@ -1,0 +1,60 @@
+@import 'src/styles/theme';
+
+.container {
+  border-top: 1px solid $gray-5;
+  margin: 0 100px;
+  padding: 80px 0 50px;
+  display: flex;
+  justify-content: space-between;
+
+  & h2 {
+    padding-bottom: 16px;
+    color: $gray-1;
+  }
+
+  & form {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+
+    & input {
+      background-color: $light-gray;
+      padding: 12px;
+      width: 240px;
+
+      &::placeholder {
+        font-weight: 300;
+        color: $gray-2;
+      }
+    }
+
+    & button {
+      background-color: $orange;
+      color: $white;
+      padding: 10px;
+      height: 44px;
+    }
+  }
+}
+
+.listContainer {
+  max-width: 270px;
+
+  & ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    & li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: $gray-2;
+
+      & a:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

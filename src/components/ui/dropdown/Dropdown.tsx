@@ -1,7 +1,6 @@
 import React, {FC} from 'react';
 import {MenuItem, Select} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
-import styles from './Dropdown.module.scss';
 
 interface DropdownProps {
 	dropdownContent: {
@@ -15,6 +14,7 @@ const Dropdown: FC<DropdownProps> = ({dropdownContent}) => {
 		<Select
 			value={0}
 			sx={{
+				color: '#3A3A3A',
 				'.MuiOutlinedInput-input': {
 					padding: '10px 0',
 				},
@@ -32,7 +32,7 @@ const Dropdown: FC<DropdownProps> = ({dropdownContent}) => {
 				{dropdownContent.title}
 			</MenuItem>
 			{dropdownContent.items.map((item, index) => (
-				<MenuItem key={index}>
+				<MenuItem key={index} sx={{color: '#3A3A3A'}}>
 					{item.name}
 				</MenuItem>
 			))}

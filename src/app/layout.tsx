@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import "../styles/global.scss";
 import React from "react";
 import HeaderNav from "@/components/layout/header-nav/HeaderNav";
+import Footer from "@/components/layout/footer/Footer";
+import "../styles/global.scss";
 
 export const metadata: Metadata = {
   title: "Funiro Landing",
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
       <HeaderNav/>
         {children}
+      <Footer/>
       </body>
     </html>
   );
