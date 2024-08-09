@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './Footer.module.scss';
-import links from './index';
+import links from './utils';
 import {Telegram} from "@mui/icons-material";
 
 const Footer = () => {

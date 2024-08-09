@@ -1,10 +1,13 @@
 @import "src/styles/theme";
+@import "src/styles/breakpoints";
 
 .container {
   padding: 90px 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px 20px;
+  flex-wrap: wrap;
 }
 
 .feature {
@@ -28,3 +31,45 @@
   width: 50px;
   height: 50px;
 }
+
+@media screen and (max-width: $breakpoint-desktop-medium){
+  .container {
+    padding: 70px 80px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop-semi-medium){
+  .container {
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop){
+  .container {
+    padding: 50px 50px;
+  }
+
+  .feature {
+    gap: 18px;
+
+    & h3 {
+      font-size: 16px;
+    }
+
+    & p {
+      font-size: 14px;
+    }
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet){
+  .container {
+    padding: 50px 30px;
+  }
+}
+

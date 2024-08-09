@@ -1,4 +1,5 @@
 @import "src/styles/theme";
+@import "src/styles/breakpoints";
 
 .container {
   background-color: $beige;
@@ -33,9 +34,9 @@
 
 .introText {
   position: absolute;
-  left: 100px;
-  bottom: 90px;
-  width: 515px;
+  left: 6.8vw;
+  bottom: 6vw;
+  width: 33vw;
   padding: 63px 60px;
   background-color: rgba($white, 0.72);
   backdrop-filter: blur(20px);
@@ -43,7 +44,7 @@
   & h1 {
     color: $gray-1;
     line-height: 68px;
-    font-size: 56px;
+    font-size: 52px;
     padding-bottom: 10px;
     font-weight: 600;
   }
@@ -68,6 +69,52 @@
 
     &:hover {
       background-color: rgba($orange, 0.8);
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop-medium){
+  .introText {
+    padding: 45px 40px;
+
+    & h1 {
+      line-height: 62px;
+      font-size: 3vw;
+    }
+
+    & p {
+      font-size: 18px;
+      line-height: 28px;
+      padding-bottom: 30px;
+    }
+
+    & button {
+      padding: 16px 32px;
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop-semi-medium){
+  .introText {
+    padding: 45px 40px;
+
+    & h1 {
+      line-height: 50px;
+      font-size: 2.6vw;
+    }
+
+    & p {
+      font-size: 16px;
+      line-height: 26px;
+      padding-bottom: 24px;
+    }
+
+    & button {
+      padding: 12px 30px;
+      font-size: 16px;
+      line-height: 24px;
     }
   }
 }
