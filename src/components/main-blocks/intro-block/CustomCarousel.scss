@@ -1,0 +1,81 @@
+@import "src/styles/theme";
+
+.carousel.carousel-slider {
+  overflow: visible;
+}
+
+.carousel .slider-wrapper.axis-horizontal .slider {
+  margin-left: 10%;
+}
+
+.carousel .control-dots {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.carousel .control-dots .dot {
+  border: 1px solid transparent;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 27px;
+  height: 27px;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  opacity: 1;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:before {
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-color: $gray-5;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+}
+
+.carousel .control-dots .dot.selected {
+  border-color: $orange;
+
+  &:before {
+    background-color: $orange;
+  }
+}
+
+.carousel.carousel-slider .control-arrow {
+  background-color: rgba(232, 159, 113, 0.3);
+  height: 48px;
+  width: 48px;
+  opacity: 1;
+  color: $orange;
+  font-size: 20px;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: -70px;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+.carousel .control-next.control-arrow {
+  right: 9%;
+}
+
+.carousel .control-prev.control-arrow {
+  right: 200px;
+  left: unset;
+}
+
+.carousel .control-arrow:hover, .carousel.carousel-slider .control-arrow:hover {
+  background-color: $orange;
+}

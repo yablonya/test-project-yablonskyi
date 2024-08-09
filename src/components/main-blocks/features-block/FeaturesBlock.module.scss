@@ -1,0 +1,30 @@
+@import "src/styles/theme";
+
+.container {
+  padding: 90px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  color:$gray-1;
+
+  & h3 {
+    padding-bottom: 3px;
+    font-weight: 500;
+  }
+
+  & p {
+    color: $gray-3
+  }
+}
+
+.icon {
+  color: $gray-1;
+  width: 50px;
+  height: 50px;
+}

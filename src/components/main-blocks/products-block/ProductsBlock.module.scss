@@ -1,0 +1,40 @@
+@import "src/styles/theme";
+
+.container {
+  padding: 0 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & h2 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: 600;
+    color: $gray-1;
+    padding-bottom: 30px;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.showMore {
+  border: 1px solid $orange;
+  color: $orange;
+  padding: 12px 20px;
+  line-height: 24px;
+  width: 245px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin: 30px 0 40px;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $orange;
+    color: $white;
+  }
+}

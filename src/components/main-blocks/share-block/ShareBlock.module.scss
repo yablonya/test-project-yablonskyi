@@ -1,0 +1,164 @@
+@import "src/styles/theme";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 0 70px;
+  overflow: hidden;
+
+  & p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    color: $gray-2;
+    padding-bottom: 10px;
+  }
+
+  & h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $gray-1;
+  }
+}
+
+.mosaic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  & img {
+    height: auto;
+  }
+
+  & > img {
+    width: 20vw;
+  }
+
+  & .leftPart, & .rightPart {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  & .leftUpper, & .rightUpper {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  & .leftLower, & .rightLower {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  & .leftUpper {
+    & img:first-child {
+      width: 15vw;
+    }
+    & img:last-child {
+      width: 32vw;
+    }
+  }
+
+  & .leftLower {
+    & img:first-child {
+      width: 22vw;
+    }
+    & img:last-child {
+      width: 25vw;
+    }
+  }
+
+  & .rightUpper {
+    & img:first-child {
+      width: 21vw;
+    }
+    & img:last-child {
+      width: 10vw;
+    }
+  }
+
+  & .rightLower {
+    & img:first-child {
+      width: 13vw;
+    }
+    & img:last-child {
+      width: 18vw;
+    }
+  }
+}
+
+//.mosaic {
+//  display: grid;
+//  grid-template-columns: repeat(9, 1fr);
+//  grid-template-rows: repeat(8, 7.69vw);
+//  gap: 10px;
+//
+//  & img:nth-child(1) {
+//    grid-column: 1 / 2;
+//    grid-row: 1 / 4;
+//    width: 14vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(2) {
+//    grid-column: 2 / 5; /* Займає другу та третю колонки */
+//    grid-row: 2 / 4; /* Займає перший ряд */
+//    width: 31vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(3) {
+//    grid-column: 1 / 3; /* Займає першу колонку */
+//    grid-row: 5 / 8; /* Займає третій ряд */
+//    width: 21vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(4) {
+//    grid-column: 3 / 5; /* Займає другу колонку */
+//    grid-row: 5 / 7; /* Займає другий ряд */
+//    width: 24vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(5) {
+//    grid-column: 5 / 7; /* Займає третю колонку */
+//    grid-row: 3 / 6; /* Займає другий та третій ряди */
+//    width: 20vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(6) {
+//    grid-column: 7 / 9; /* Займає четверту колонку */
+//    grid-row: 2 / 5; /* Займає перші два ряди */
+//    width: 20vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(7) {
+//    grid-column: 9; /* Займає четверту колонку */
+//    grid-row: 1 / 5; /* Займає третій ряд */
+//    width: 9vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(8) {
+//    grid-column: 7 / 8; /* Займає другу колонку */
+//    grid-row: 5 / 7; /* Займає третій ряд */
+//    width: 12vw;
+//    height: auto;
+//  }
+//
+//  & img:nth-child(9) {
+//    grid-column: 8 / 10; /* Займає четверту колонку */
+//    grid-row: 5 / 6; /* Займає третій ряд */
+//    width: 17vw;
+//    height: auto;
+//  }
+//
+//}
