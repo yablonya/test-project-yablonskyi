@@ -51,7 +51,7 @@ const RoomsBlock = () => {
 				swipeable={true}
 			>
 				{rooms.map((room, index) => (
-					<div>
+					<div key={index}>
 						<img
 							alt="room image"
 							src={room.href}
