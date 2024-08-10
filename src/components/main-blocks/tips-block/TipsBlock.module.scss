@@ -1,0 +1,69 @@
+@import "src/styles/theme";
+@import "../../../styles/mixins";
+@import "../../../styles/breakpoints";
+
+.container {
+  padding: 50px 100px 30px;
+
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 600;
+    color: $gray-1;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.tipText {
+  padding: 20px;
+
+  h5 {
+    color: $gray-1;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 28px;
+    text-align: left;
+    padding-bottom: 10px;
+  }
+
+  p {
+    color: $gray-3;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 21px;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop-semi-medium){
+  .container {
+    padding: 50px 80px 50px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop){
+  .container {
+    padding: 50px 50px 50px;
+  }
+
+  .tipText h5 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet){
+  .container {
+    padding: 50px 30px 40px;
+  }
+
+  .tipText h5 {
+    font-size: 16px;
+  }
+}

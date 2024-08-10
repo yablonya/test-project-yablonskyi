@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import {Share, FavoriteBorderOutlined} from '@mui/icons-material'
 import styles from './ProductCard.module.scss';
+import {formatPrice} from "@/utils/formatPrice";
 
 interface ProductCardProps {
 	product: {
@@ -15,11 +16,6 @@ interface ProductCardProps {
 }
 
 const ProductCard: FC<ProductCardProps> = ({product}) => {
-	const formatPrice = (price: number) => {
-		const strPrice = price.toString();
-		return strPrice.replace(/\B(?=(\d{3})+(?!\d))/g, '.')
-	}
-
 	return (
 		<div className={styles.container}>
 			<img src={product.imgUrl} alt={product.name}/>

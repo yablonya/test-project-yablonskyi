@@ -1,0 +1,73 @@
+@import "src/styles/theme";
+@import "../../../styles/mixins";
+@import "../../../styles/breakpoints";
+
+.tips-carousel {
+  padding: 0 20px;
+
+  .carousel.carousel-slider {
+    overflow: visible;
+  }
+
+  .carousel .slide {
+    padding: 10px;
+  }
+
+  .tipContainer {
+    box-shadow: 0 0 15px 0 $white;
+    transition: all 0.2s ease;
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  .carousel .slide.selected .tipContainer{
+    box-shadow: 0 0 15px 0 $gray-6;
+  }
+
+  .carousel .control-dots {
+    @include carousel-dots;
+    position: absolute;
+    bottom: -55px;
+  }
+
+  .carousel .control-dots .dot {
+    @include carousel-dot
+  }
+
+  .carousel .control-dots .dot.selected {
+    border-color: $orange;
+
+    &:before {
+      background-color: $orange;
+    }
+  }
+
+  .carousel.carousel-slider .control-arrow {
+    @include carousel-button;
+    box-shadow: 0 0 10px 0 $gray-4;
+    top: calc(50% - 24px);
+    background-color: $white;
+  }
+
+  .carousel .control-prev.control-arrow {
+    left: -10px;
+
+    &::before {
+      transform: rotate(-135deg);
+      top: 1px;
+      left: 2px;
+    }
+  }
+
+  .carousel .control-next.control-arrow {
+    right: -10px;
+
+    &::before {
+      transform: rotate(45deg);
+      left: -2px;
+    }
+  }
+}

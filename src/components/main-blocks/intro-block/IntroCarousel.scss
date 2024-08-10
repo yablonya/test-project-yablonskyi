@@ -11,10 +11,55 @@
     margin-left: 10%;
   }
 
+  .carousel .slide div div {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+    right: 7%;
+    bottom: 7%;
+    width: 34%;
+    padding: 30px;
+    background-color: rgba($white, 0.72);
+    backdrop-filter: blur(20px);
+    text-align: left;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h4 {
+      font-size: 26px;
+      font-weight: 500;
+      color: $gray-1;
+    }
+
+    p {
+      color: $gray-2;
+      font-weight: 400;
+      font-size: 16px;
+      padding: 3px 0 5px;
+    }
+
+    h5 {
+      color: $gray-1;
+      font-weight: 500;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .carousel .slide.selected div div {
+    opacity: 1;
+    visibility: visible;
+  }
+
   .carousel .control-dots {
+    @include carousel-dots;
     position: absolute;
     top: -60px;
-    @include carousel-dots
   }
 
   .carousel .control-dots .dot {
@@ -31,6 +76,7 @@
 
   .carousel.carousel-slider .control-arrow {
     @include carousel-button;
+    top: -70px;
   }
 
   .carousel .control-prev.control-arrow {
@@ -59,6 +105,27 @@
     .carousel .slider-wrapper.axis-horizontal .slider {
       margin-left: 0;
     }
+
+    .carousel .slide div div {
+      width: 50%;
+      bottom: unset;
+      top: 7%;
+
+      h4 {
+        font-size: 22px;
+        font-weight: 500;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      h5 {
+        font-weight: 500;
+        font-size: 18px;
+      }
+    }
   }
 }
 
@@ -66,6 +133,52 @@
   .intro-carousel {
     .carousel.carousel-slider .control-arrow {
       display: none;
+    }
+
+    .carousel .slide div div {
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 12px;
+      }
+
+      h5 {
+        font-weight: 400;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile){
+  .intro-carousel {
+    .carousel.carousel-slider .control-arrow {
+      display: none;
+    }
+
+    .carousel .slide div div {
+      left: 7%;
+      bottom: 7%;
+      width: auto;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 12px;
+      }
+
+      h5 {
+        font-weight: 400;
+        font-size: 16px;
+      }
     }
   }
 }

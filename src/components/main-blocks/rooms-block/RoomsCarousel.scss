@@ -5,31 +5,88 @@
 .rooms-carousel {
   width: 57%;
 
+  .carousel.carousel-slider {
+    overflow: visible;
+  }
+
   .carousel .slider-wrapper.axis-horizontal {
     overflow: hidden;
-    height: 40vw;
+    height: 37vw;
     position: relative;
   }
 
   .carousel .slider-wrapper.axis-horizontal .slider {
-    margin-left: -30%;
+    margin-left: -29%;
   }
 
-  .carousel .slide {
-    height: 35vw;
+  .carousel .slide > div {
+    width: 25vw;
+    height: 33vw;
     transition: height 0.3s ease 0.17s;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 12px;
+    position: relative;
 
     img {
       height: 100%;
       width: auto;
     }
+
+    & > div {
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      left: 10%;
+      bottom: 4%;
+      padding: 30px;
+      background-color: rgba($white, 0.72);
+      transition: all 0.3s ease;
+
+      p {
+        font-size: 14px;
+        color: $gray-2;
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding-bottom: 3px;
+
+        hr {
+          width: 10%;
+          height: 0;
+          border-color: $gray-3;
+        }
+      }
+
+      h4 {
+        font-size: 24px;
+        color: $gray-1;
+        text-align: left;
+      }
+
+      div {
+        background-color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $white;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        bottom: 0;
+        right: -50px;
+      }
+    }
   }
 
-  .carousel .slide.selected {
-    height: 40vw;
-    margin: 0 10px;
+  .carousel .slide.selected > div {
+    height: 37vw;
+    width: 27vw;
+
+    & > div {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 
   .carousel .control-dots {
@@ -60,6 +117,8 @@
     @include carousel-button;
     top: calc(50% - 24px);
     background-color: $white;
+    right: 40px;
+    box-shadow: 0 0 10px 0 $gray-4;
 
     &::before {
       transform: rotate(45deg);
@@ -69,9 +128,25 @@
 }
 
 @media screen and (max-width: $breakpoint-desktop-semi-medium) {
-  .rooms-carousel .carousel .control-dots {
-    bottom: 0.5vw;
-    left: 6vw;
+  .rooms-carousel .carousel {
+    .control-dots {
+      bottom: 0.5vw;
+      left: 6vw;
+    }
+
+    .slide > div > div {
+      bottom: unset;
+      top: 7%;
+      padding: 20px;
+
+      div {
+        width: 40px;
+        height: 40px;
+        right: unset;
+        bottom: -40px;
+        left: 0;
+      }
+    }
   }
 }
 
@@ -83,7 +158,39 @@
 }
 
 @media screen and (max-width: $breakpoint-tablet) {
-  .rooms-carousel .carousel .control-dots {
+  .rooms-carousel .carousel {
+    .control-dots {
+      bottom: -55px;
+      left: unset;
+    }
+
+    .slide > div > div {
+      width: auto;
+      right: 10%;
+      left: 10%;
+
+      h4 {
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      div {
+        width: 40px;
+        height: 40px;
+        right: unset;
+        bottom: -40px;
+        left: 0;
+      }
+    }
+  }
+
+  .rooms-carousel .carousel .control-next.control-arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $breakpoint-mobile-medium){
+  .rooms-carousel .carousel .slide > div > div {
     display: none;
   }
 }

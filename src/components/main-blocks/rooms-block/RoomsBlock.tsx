@@ -4,12 +4,29 @@ import styles from './RoomsBlock.module.scss'
 import './RoomsCarousel.scss';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import {Carousel} from "react-responsive-carousel";
+import {East} from "@mui/icons-material";
 
-const roomImages = [
-	'/images/rooms/bed-room.png',
-	'/images/rooms/kitchen.png',
-	'/images/rooms/workroom.png',
-	'/images/rooms/kitchen.png'
+const rooms = [
+	{
+		href: '/images/rooms/bed-room.png',
+		name: 'Bed Room',
+		description: 'Inner Peace'
+	},
+	{
+		href: '/images/rooms/kitchen.png',
+		name: 'Kitchen',
+		description: 'Cozy Cooking'
+	},
+	{
+		href: '/images/rooms/bed-room.png',
+		name: 'Bed Room',
+		description: 'Inner Peace'
+	},
+	{
+		href: '/images/rooms/workroom.png',
+		name: 'Workroom',
+		description: 'Focused Work'
+	},
 ];
 
 const RoomsBlock = () => {
@@ -30,15 +47,22 @@ const RoomsBlock = () => {
 				showThumbs={false}
 				centerMode={true}
 				showStatus={false}
-				centerSlidePercentage={45}
+				centerSlidePercentage={48}
 				swipeable={true}
 			>
-				{roomImages.map((src, index) => (
-					<img
-						alt="intro image"
-						src={src}
-						key={index}
-					/>
+				{rooms.map((room, index) => (
+					<div>
+						<img
+							alt="room image"
+							src={room.href}
+							key={index}
+						/>
+						<div>
+							<p>{index + 1}<hr/>{room.name}</p>
+							<h4>{room.description}</h4>
+							<div><East/></div>
+						</div>
+					</div>
 				))}
 			</Carousel>
 		</div>
