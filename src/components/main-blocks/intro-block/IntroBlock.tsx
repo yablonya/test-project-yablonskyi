@@ -3,7 +3,7 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from './IntroBlock.module.scss';
-import './CustomCarousel.scss'
+import './IntroCarousel.scss'
 
 const introImages = [
 	'/images/intro/intro-1.png',
@@ -15,7 +15,16 @@ const introImages = [
 const IntroBlock = () => {
 	return (
 		<div className={styles.container}>
+			<div className={styles.introText}>
+				<h1>High-Quality Furniture Just For You</h1>
+				<p>
+					Our furniture is made from selected and best quality materials that are suitable for your dream home
+				</p>
+				<button>Shop Now</button>
+			</div>
+
 			<Carousel
+				className='intro-carousel'
 				useKeyboardArrows={true}
 				infiniteLoop={true}
 				showThumbs={false}
@@ -33,14 +42,6 @@ const IntroBlock = () => {
 					</div>
 				))}
 			</Carousel>
-
-			<div className={styles.introText}>
-				<h1>High-Quality Furniture Just For You</h1>
-				<p>
-					Our furniture is made from selected and best quality materials that are suitable for your dream home
-				</p>
-				<button>Shop Now</button>
-			</div>
 		</div>
 	);
 };

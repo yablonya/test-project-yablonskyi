@@ -1,0 +1,71 @@
+@import "src/styles/theme";
+@import "../../../styles/mixins";
+@import "../../../styles/breakpoints";
+
+.intro-carousel {
+  .carousel.carousel-slider {
+    overflow: visible;
+  }
+
+  .carousel .slider-wrapper.axis-horizontal .slider {
+    margin-left: 10%;
+  }
+
+  .carousel .control-dots {
+    position: absolute;
+    top: -60px;
+    @include carousel-dots
+  }
+
+  .carousel .control-dots .dot {
+    @include carousel-dot
+  }
+
+  .carousel .control-dots .dot.selected {
+    border-color: $orange;
+
+    &:before {
+      background-color: $orange;
+    }
+  }
+
+  .carousel.carousel-slider .control-arrow {
+    @include carousel-button;
+  }
+
+  .carousel .control-prev.control-arrow {
+    right: 160px;
+    left: unset;
+
+    &::before {
+      transform: rotate(-135deg);
+      top: 1px;
+      left: 2px;
+    }
+  }
+
+  .carousel .control-next.control-arrow {
+    right: 100px;
+
+    &::before {
+      transform: rotate(45deg);
+      left: -2px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop){
+  .intro-carousel {
+    .carousel .slider-wrapper.axis-horizontal .slider {
+      margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet){
+  .intro-carousel {
+    .carousel.carousel-slider .control-arrow {
+      display: none;
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @import "src/styles/theme";
+@import "src/styles/breakpoints";
 
 .container {
   padding: 0 100px;
@@ -6,7 +7,7 @@
   flex-direction: column;
   align-items: center;
 
-  & h2 {
+  h2 {
     font-size: 40px;
     text-align: center;
     font-weight: 600;
@@ -38,3 +39,48 @@
     color: $white;
   }
 }
+
+@media screen and (max-width: $breakpoint-desktop-semi-medium) {
+  .container {
+    padding: 0 80px;
+
+    h2 {
+      font-size: 32px;
+      line-height: 40px;
+      font-weight: 500;
+    }
+  }
+
+  .products {
+    gap: 30px;
+    justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .container {
+    padding: 0 50px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .products {
+    gap: 20px;
+  }
+
+}
+
+@media screen and (max-width: $breakpoint-mobile-medium) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .products {
+    gap: 15px;
+  }
+}
+

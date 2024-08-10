@@ -1,0 +1,97 @@
+@import "src/styles/theme";
+@import "src/styles/breakpoints";
+
+.drawerContent {
+  padding: 25px 30px;
+
+  & > div:first-child {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 30px;
+
+    h2 {
+      color: $black;
+    }
+  }
+
+  & > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .account {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    a {
+      padding: 6px 20px;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+
+    & > a {
+      padding: 12px 16px;
+    }
+  }
+}
+
+.accountAndSearch {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 20px;
+
+  .searchBox {
+    position: relative;
+    padding: 10px;
+    min-width: 150px;
+    flex: 1;
+    text-overflow: ellipsis;
+    border-bottom: 1px solid $gray-1;
+
+    input {
+      height: 100%;
+      width: 100%;
+      padding-left: 40px;
+
+      &::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+    }
+  }
+
+  .searchIcon {
+    position: absolute;
+    color: $gray-1;
+  }
+}
+
+.accordion {
+  box-shadow: none;
+  &::before {
+    background-color: transparent;
+  }
+}
+
+.accordionTabs {
+  display: flex;
+  flex-direction: column;
+  a {
+    padding: 6px 20px;
+
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+}
+
+.drawerCloseButton {
+  cursor: pointer;
+}

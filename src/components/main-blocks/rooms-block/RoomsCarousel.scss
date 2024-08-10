@@ -1,0 +1,89 @@
+@import "src/styles/theme";
+@import "src/styles/mixins";
+@import "src/styles/breakpoints";
+
+.rooms-carousel {
+  width: 57%;
+
+  .carousel .slider-wrapper.axis-horizontal {
+    overflow: hidden;
+    height: 40vw;
+    position: relative;
+  }
+
+  .carousel .slider-wrapper.axis-horizontal .slider {
+    margin-left: -30%;
+  }
+
+  .carousel .slide {
+    height: 35vw;
+    transition: height 0.3s ease 0.17s;
+    overflow: hidden;
+    padding: 0 10px;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  .carousel .slide.selected {
+    height: 40vw;
+    margin: 0 10px;
+  }
+
+  .carousel .control-dots {
+    position: absolute;
+    bottom: 1vw;
+    left: 3vw;
+
+    @include carousel-dots
+  }
+
+  .carousel .control-dots .dot {
+    @include carousel-dot
+  }
+
+  .carousel .control-dots .dot.selected {
+    border-color: $orange;
+
+    &:before {
+      background-color: $orange;
+    }
+  }
+
+  .carousel .control-prev.control-arrow {
+    display: none;
+  }
+
+  .carousel .control-next.control-arrow {
+    @include carousel-button;
+    top: calc(50% - 24px);
+    background-color: $white;
+
+    &::before {
+      transform: rotate(45deg);
+      left: -2px;
+    }
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop-semi-medium) {
+  .rooms-carousel .carousel .control-dots {
+    bottom: 0.5vw;
+    left: 6vw;
+  }
+}
+
+@media screen and (max-width: $breakpoint-desktop) {
+  .rooms-carousel .carousel .control-dots {
+    bottom: 0.2vw;
+    left: 7.2vw;
+  }
+}
+
+@media screen and (max-width: $breakpoint-tablet) {
+  .rooms-carousel .carousel .control-dots {
+    display: none;
+  }
+}

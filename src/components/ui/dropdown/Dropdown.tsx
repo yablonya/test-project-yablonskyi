@@ -33,7 +33,7 @@ const Dropdown: FC<DropdownProps> = ({dropdownContent}) => {
 			</MenuItem>
 			{dropdownContent.items.map((item, index) => (
 				<MenuItem key={index} sx={{color: '#3A3A3A'}}>
-					{item.name}
+					<a href={item.href}>{item.name}</a>
 				</MenuItem>
 			))}
 		</Select>

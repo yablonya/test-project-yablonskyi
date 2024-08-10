@@ -8,7 +8,7 @@
   padding: 60px 0 70px;
   overflow: hidden;
 
-  & p {
+  p {
     font-size: 20px;
     line-height: 30px;
     font-weight: 500;
@@ -16,7 +16,7 @@
     padding-bottom: 10px;
   }
 
-  & h2 {
+  h2 {
     font-size: 40px;
     line-height: 48px;
     font-weight: 600;
@@ -24,13 +24,13 @@
   }
 
   @media screen and (max-width: $breakpoint-desktop-semi-medium){
-    & h2 {
+    h2 {
       font-size: 32px;
       line-height: 40px;
       font-weight: 500;
     }
 
-    & p {
+    p {
       font-size: 18px;
       line-height: 26px;
       font-weight: 400;
@@ -38,24 +38,24 @@
   }
 
   @media screen and (max-width: $breakpoint-tablet){
-    & h2 {
+    h2 {
       font-size: 24px;
       line-height: 30px;
     }
 
-    & p {
+    p {
       font-size: 16px;
       line-height: 22px;
     }
   }
 
   @media screen and (max-width: $breakpoint-mobile-medium){
-    & h2 {
+    h2 {
       font-size: 20px;
       line-height: 28px;
     }
 
-    & p {
+    p {
       font-size: 14px;
       line-height: 18px;
     }
@@ -70,7 +70,7 @@
   position: relative;
   top: -20px;
 
-  & img {
+  img {
     height: auto;
   }
 
@@ -78,57 +78,57 @@
     width: 20vw;
   }
 
-  & .leftPart, & .rightPart {
+  .leftPart, .rightPart {
     display: flex;
     gap: 10px;
     align-items: center;
     flex-direction: column;
   }
 
-  & .leftUpper, & .rightUpper {
+  .leftUpper, .rightUpper {
     display: flex;
     gap: 10px;
     align-items: flex-end;
   }
 
-  & .leftLower, & .rightLower {
+  .leftLower, .rightLower {
     display: flex;
     gap: 10px;
     align-items: flex-start;
   }
 
-  & .leftUpper {
-    & img:first-child {
+  .leftUpper {
+    img:first-child {
       width: 15vw;
     }
-    & img:last-child {
+    img:last-child {
       width: 32vw;
     }
   }
 
-  & .leftLower {
-    & img:first-child {
+  .leftLower {
+    img:first-child {
       width: 22vw;
     }
-    & img:last-child {
+    img:last-child {
       width: 25vw;
     }
   }
 
-  & .rightUpper {
-    & img:first-child {
+  .rightUpper {
+    img:first-child {
       width: 21vw;
     }
-    & img:last-child {
+    img:last-child {
       width: 10vw;
     }
   }
 
-  & .rightLower {
-    & img:first-child {
+  .rightLower {
+    img:first-child {
       width: 13vw;
     }
-    & img:last-child {
+    img:last-child {
       width: 18vw;
     }
   }
@@ -137,9 +137,9 @@
     top: 0;
     gap: 6px;
 
-    & .leftPart, & .rightPart,
-    & .leftUpper, & .rightUpper,
-    & .leftLower, & .rightLower {
+    .leftPart, .rightPart,
+    .leftUpper, .rightUpper,
+    .leftLower, .rightLower {
       gap: 6px;
     }
   }

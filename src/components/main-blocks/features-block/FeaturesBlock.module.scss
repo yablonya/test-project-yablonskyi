@@ -16,12 +16,12 @@
   gap: 23px;
   color:$gray-1;
 
-  & h3 {
+  h3 {
     padding-bottom: 3px;
     font-weight: 500;
   }
 
-  & p {
+  p {
     color: $gray-3
   }
 }
@@ -52,11 +52,11 @@
   .feature {
     gap: 18px;
 
-    & h3 {
+    h3 {
       font-size: 16px;
     }
 
-    & p {
+    p {
       font-size: 14px;
     }
   }

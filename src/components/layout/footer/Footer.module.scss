@@ -10,17 +10,17 @@
   gap: 40px 40px;
   flex-wrap: wrap;
 
-  & h2 {
+  h2 {
     padding-bottom: 16px;
     color: $gray-1;
   }
 
-  & form {
+  form {
     display: flex;
     align-items: center;
     gap: 4px;
 
-    & input {
+    input {
       background-color: $light-gray;
       padding: 12px;
       width: 240px;
@@ -31,7 +31,7 @@
       }
     }
 
-    & button {
+    button {
       background-color: $orange;
       color: $white;
       padding: 10px;
@@ -49,7 +49,7 @@
     padding: 60px 0 30px;
     gap: 30px 30px;
 
-    & h2 {
+    h2 {
       font-size: 18px;
       padding-bottom: 10px;
     }
@@ -57,7 +57,7 @@
     & > div:last-child {
       width: 100%;
 
-      & input {
+      input {
         width: 100%;
       }
     }
@@ -73,19 +73,19 @@
 .listContainer {
   max-width: 270px;
 
-  & ul {
+  ul {
     list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
-    & li {
+    li {
       display: flex;
       align-items: center;
       gap: 6px;
       color: $gray-2;
 
-      & a:hover {
+      a:hover {
         text-decoration: underline;
       }
     }
@@ -94,12 +94,12 @@
   @media screen and (max-width: $breakpoint-tablet){
     max-width: none;
 
-    & h2 {
+    h2 {
       font-size: 18px;
       padding-bottom: 10px;
     }
 
-    & ul {
+    ul {
       gap: 10px;
       font-size: 14px;
     }
